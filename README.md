@@ -1,34 +1,45 @@
-# Hi, I'm LiFan Chen
+<p align="center">
+  <img src="assets/whitesaillabs-banner.png" alt="WhiteSailLabs — AI × Interaction × Tools" width="100%" />
+</p>
 
-CS builder focused on local-first agent tools, browser-native interfaces, and
-systems where AI, interaction, and perception meet.
+<h1 align="center">Hi, I'm LiFan Chen</h1>
 
-```ts
-const lifan = {
-  focus: ["AI agents", "frontend systems", "computer vision", "interactive 3D"],
-  stack: ["Python", "TypeScript", "React", "Three.js", "PyTorch"],
-  current: "building local-first agent tools and browser-native experiments",
-  mode: "ship small, learn fast, leave readable code",
-};
-```
+<p align="center">
+  <strong>AI product builder creating local-first agents, intelligent interfaces, and tools that make machines feel less awkward to work with.</strong>
+</p>
 
-## Now
+<p align="center">
+  Shanghai, China · ShanghaiTech University
+</p>
 
-- Building gesture-driven, browser-native interfaces like [shengbei-wish](https://github.com/WhiteSailLabs/shengbei-wish).
-- Building [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent), a local LLM workspace that turns Q&A into Obsidian knowledge notes.
-- Exploring AI agent tooling, codebase understanding, and LLM evaluation.
-- Learning deep learning, vision, and software architecture by shipping small projects.
+## Featured work
 
-## Projects
+| Project | What it explores | Stack |
+| --- | --- | --- |
+| [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) | A local LLM workspace that turns useful Q&A into organized Obsidian notes. | Python · Local LLMs · Obsidian |
+| [shengbei-wish](https://github.com/WhiteSailLabs/shengbei-wish) | A gesture-driven, browser-native ritual interface with interactive 3D. | TypeScript · React · Three.js |
+| [daily-tech-research](https://github.com/WhiteSailLabs/daily-tech-research) | Daily research notes on emerging technologies and practical AI systems. | Research · AI · Automation |
+| [awesome-ai-agent-interview](https://github.com/WhiteSailLabs/awesome-ai-agent-interview) | A growing knowledge base for understanding and interviewing for AI agent work. | Agents · LLMs · Systems |
 
-- [shengbei-wish](https://github.com/WhiteSailLabs/shengbei-wish) - a React + Three.js ritual interface with gesture interaction.
-- [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) - a local LLM Q&A workspace that automatically organizes useful answers into Obsidian.
-- [job-agent](https://github.com/WhiteSailLabs/job-agent) - experiments around agent workflows.
-- [awesome-ai-agent-interview](https://github.com/WhiteSailLabs/awesome-ai-agent-interview) - notes and resources for AI agent interviews.
-- [personal_web](https://github.com/WhiteSailLabs/personal_web) - personal web experiments.
+## Currently building
 
-## Open Source Interests
+- An AI-native poker coach that helps players reason about the table.
+- A local-first desktop inbox for quickly capturing and organizing thoughts.
+- Personalized learning experiences built on agentic tutoring systems.
 
-AI devtools, LLM evaluation, browser automation, local-first search, frontend UX
-polish, and small tools that make machines feel less awkward to work with.
+## Toolkit
 
+`Python` · `TypeScript` · `React` · `Three.js` · `PyTorch` · `Computer Vision` · `AI Agents` · `Local-first Software`
+
+## Principles
+
+> Ship small. Learn fast. Leave readable code.
+
+I care about calm interfaces, useful intelligence, local ownership, and software
+that feels thoughtfully made. My current interests include AI devtools, LLM
+evaluation, browser automation, computer vision, and new forms of human-computer
+interaction.
+
+<p align="center">
+  <sub>Exploring the space where AI, interaction, and perception meet.</sub>
+</p>
