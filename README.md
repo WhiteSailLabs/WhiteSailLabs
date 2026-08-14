@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/whitesaillabs-banner.png" alt="WhiteSailLabs — AI × Interaction × Tools" width="100%" />
+  <img src="assets/agent-fde-banner.png" alt="From ambiguous signals to deployed agent systems" width="100%" />
 </p>
 
 <h1 align="center">Hi, I'm LiFan Chen</h1>
