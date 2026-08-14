@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/agent-fde-banner.png" alt="From ambiguous signals to deployed agent systems" width="100%" />
+  <img src="assets/editorial-fde-banner-3x1.png" alt="From ambiguity to a precise deployed outcome" width="100%" />
 </p>
 
 <h1 align="center">Hi, I'm LiFan Chen</h1>
