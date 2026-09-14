@@ -16,6 +16,7 @@
 
 | Project | What it explores | Stack |
 | --- | --- | --- |
+| [resume-job-agent](https://github.com/WhiteSailLabs/resume-job-agent) | A local-first workflow that discovers China jobs, reviews JDs, and creates evidence-grounded tailored resumes. | Python · FastAPI · Next.js · LLM Agents |
 | [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) | A local LLM workspace that turns useful Q&A into organized Obsidian notes. | Python · Local LLMs · Obsidian |
 | [shengbei-wish](https://github.com/WhiteSailLabs/shengbei-wish) | A gesture-driven, browser-native ritual interface with interactive 3D. | TypeScript · React · Three.js |
 | [daily-tech-research](https://github.com/WhiteSailLabs/daily-tech-research) | Daily research notes on emerging technologies and practical AI systems. | Research · AI · Automation |
