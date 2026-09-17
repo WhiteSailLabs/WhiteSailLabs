@@ -2,45 +2,66 @@
   <img src="assets/editorial-fde-banner-3x1.png" alt="From ambiguity to a precise deployed outcome" width="100%" />
 </p>
 
-<h1 align="center">Hi, I'm LiFan Chen</h1>
+<h1 align="center">LiFan Chen · Agent Engineer / FDE</h1>
 
 <p align="center">
-  <strong>AI product builder creating local-first agents, intelligent interfaces, and tools that make machines feel less awkward to work with.</strong>
+  <strong>I turn ambiguous workflows into measurable, deployable agent systems.</strong><br/>
+  From field discovery and rapid prototyping to evaluation, integration, and capability transfer.
 </p>
 
 <p align="center">
   Shanghai, China · ShanghaiTech University
 </p>
 
-## Featured work
+## How I work
 
-| Project | What it explores | Stack |
-| --- | --- | --- |
-| [resume-job-agent](https://github.com/WhiteSailLabs/resume-job-agent) | A local-first workflow that discovers China jobs, reviews JDs, and creates evidence-grounded tailored resumes. | Python · FastAPI · Next.js · LLM Agents |
-| [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) | A local LLM workspace that turns useful Q&A into organized Obsidian notes. | Python · Local LLMs · Obsidian |
-| [shengbei-wish](https://github.com/WhiteSailLabs/shengbei-wish) | A gesture-driven, browser-native ritual interface with interactive 3D. | TypeScript · React · Three.js |
-| [daily-tech-research](https://github.com/WhiteSailLabs/daily-tech-research) | Daily research notes on emerging technologies and practical AI systems. | Research · AI · Automation |
-| [awesome-ai-agent-interview](https://github.com/WhiteSailLabs/awesome-ai-agent-interview) | A growing knowledge base for understanding and interviewing for AI agent work. | Agents · LLMs · Systems |
+`Observe the workflow` → `Define the smallest valuable problem` → `Build an end-to-end slice` → `Evaluate real failure modes` → `Deploy into the existing process` → `Transfer capability`
 
-## Currently building
+- Start from the user's daily work, not from a model or framework.
+- Turn discovery findings into test cases and acceptance criteria.
+- Automate deterministic steps; keep judgment, escalation, and accountability with people.
+- Prefer local-first deployment when data sensitivity or environment constraints matter.
+- Leave behind an observable system and a team that can solve the next problem.
 
-- An AI-native poker coach that helps players reason about the table.
-- A local-first desktop inbox for quickly capturing and organizing thoughts.
-- Personalized learning experiences built on agentic tutoring systems.
+## FDE Build Lab
+
+These are personal, openly documented adaptations of real deployment patterns—not claims of client work. Each build must include a baseline, an evaluation set, human handoff, deployment notes, and an honest failure log.
+
+| Build | Field problem | Agent system | Evidence target | Status |
+| --- | --- | --- | --- | --- |
+| [Knowledge Relay](case-studies/knowledge-relay.md) | Critical know-how is trapped in experienced people's heads and scattered manuals. | Knowledge capture, cited retrieval, guided learning, progress and escalation. | Retrieval recall, grounded-answer rate, task completion, expert interruptions avoided. | Designing |
+| [Local Asset Navigator](case-studies/local-asset-navigator.md) | Files and images exist, but their relationships and business context are missing. | Local multimodal index with permissions, provenance, search, and reusable workflows. | Top-k retrieval, search time, privacy boundary, successful task reuse. | Building on [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) |
+| [Reconcile Agent](case-studies/reconcile-agent.md) | Staff repeatedly compare POS exports, settlement sheets, and scanned receipts. | Deterministic matching plus OCR/vision extraction and a human exception queue. | Auto-match coverage, false-match rate, review time, recovered variance. | Planned |
+| [Packaging Preflight](case-studies/packaging-preflight.md) | Packaging errors are discovered late, causing queues and rework. | OCR/VLM extraction, deterministic rule checks, cited findings, and human approval. | Rule coverage, false negatives, traceability, review-time reduction. | Planned |
+
+## Selected work
+
+- **[resume-job-agent](https://github.com/WhiteSailLabs/resume-job-agent)** — local-first FDE workflow for China job discovery, JD review, and evidence-grounded resume tailoring.
+- **[llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent)** — local LLM workspace that converts useful conversations into structured, user-owned knowledge.
+- **[daily-tech-research](https://github.com/WhiteSailLabs/daily-tech-research)** — repeatable research workflow for emerging technologies and applied AI systems.
+- **[shengbei-wish](https://github.com/WhiteSailLabs/shengbei-wish)** — browser-native interaction experiment built with React, Three.js, and gesture input.
+- **[awesome-ai-agent-interview](https://github.com/WhiteSailLabs/awesome-ai-agent-interview)** — notes and resources for reasoning about agent systems and engineering interviews.
+
+## Engineering bar
+
+Every FDE build should answer five questions:
+
+1. **Value** — What costly, slow, risky, or previously abandoned task becomes possible?
+2. **Boundary** — What is automated, what remains human, and when does the system escalate?
+3. **Evidence** — Which real examples form the evaluation set, and what counts as success?
+4. **Fit** — How does the system enter the existing workflow without creating another burden?
+5. **Transfer** — What knowledge, tooling, and operating ability remain with the user?
 
 ## Toolkit
 
-`Python` · `TypeScript` · `React` · `Three.js` · `PyTorch` · `Computer Vision` · `AI Agents` · `Local-first Software`
+`Python` · `TypeScript` · `React` · `PyTorch` · `RAG` · `Tool Use` · `Multimodal AI` · `Evaluation` · `Local-first Deployment`
 
-## Principles
+## Current focus
 
-> Ship small. Learn fast. Leave readable code.
+I am building a public portfolio around **Agent × Forward Deployed Engineering**: small systems that begin with a real workflow, expose measurable value quickly, and grow only after the first useful loop works.
 
-I care about calm interfaces, useful intelligence, local ownership, and software
-that feels thoughtfully made. My current interests include AI devtools, LLM
-evaluation, browser automation, computer vision, and new forms of human-computer
-interaction.
+The Build Lab is informed by patterns documented in [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf). The implementations, datasets, evaluations, and conclusions will be my own.
 
 <p align="center">
-  <sub>Exploring the space where AI, interaction, and perception meet.</sub>
+  <sub>From ambiguity to a working system—and from a working system to lasting capability.</sub>
 </p>
