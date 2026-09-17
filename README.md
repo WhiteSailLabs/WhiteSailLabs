@@ -2,6 +2,10 @@
   <img src="assets/editorial-fde-banner-3x1.png" alt="From ambiguity to a precise deployed outcome" width="100%" />
 </p>
 
+<p align="center">
+  <strong>English</strong> · <a href="README.zh-CN.md">简体中文</a>
+</p>
+
 <h1 align="center">LiFan Chen · Agent Engineer / FDE</h1>
 
 <p align="center">
