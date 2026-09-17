@@ -2,6 +2,12 @@
 
 [简体中文](reconcile-agent.zh-CN.md)
 
+<p align="center">
+  <img src="../assets/case-studies/reconcile-agent.png" alt="Editorial illustration of retail reconciliation and human exception review" width="100%" />
+</p>
+
+<p align="center"><sub>AI-generated concept illustration, not a real client site.</sub></p>
+
 > **Portfolio build · Prototype specified.** The dataset will be generated and all discrepancies will be seeded. This is not presented as work performed for a retailer.
 
 ## The situation

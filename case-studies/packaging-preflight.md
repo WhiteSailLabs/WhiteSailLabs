@@ -2,6 +2,12 @@
 
 [简体中文](packaging-preflight.zh-CN.md)
 
+<p align="center">
+  <img src="../assets/case-studies/packaging-preflight.png" alt="Editorial illustration of evidence-based packaging preflight" width="100%" />
+</p>
+
+<p align="center"><sub>AI-generated concept illustration, not a real client site.</sub></p>
+
 > **Portfolio build · Technical design complete.** The demonstrator will use synthetic food-package artwork and public rules. It is not legal advice, a compliance certification, or a claim of client delivery.
 
 ## The situation

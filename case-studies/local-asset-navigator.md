@@ -2,6 +2,12 @@
 
 [简体中文](local-asset-navigator.zh-CN.md)
 
+<p align="center">
+  <img src="../assets/case-studies/local-asset-navigator.png" alt="Editorial illustration of scattered local files becoming a trusted asset graph" width="100%" />
+</p>
+
+<p align="center"><sub>AI-generated concept illustration, not a real client site.</sub></p>
+
 > **Portfolio build · In progress.** Built on public/synthetic data and an opt-in local workspace. This page separates implemented work from hypotheses; it does not claim a client deployment.
 
 ## The situation

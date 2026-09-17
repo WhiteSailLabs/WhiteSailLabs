@@ -2,6 +2,12 @@
 
 [简体中文](knowledge-relay.zh-CN.md)
 
+<p align="center">
+  <img src="../assets/case-studies/knowledge-relay.png" alt="Editorial illustration of AI-assisted knowledge transfer in a precision workshop" width="100%" />
+</p>
+
+<p align="center"><sub>AI-generated concept illustration, not a real client site.</sub></p>
+
 > **Portfolio build · Discovery design complete.** The demonstration will use open manuals and synthetic expert exceptions. It does not claim access to a factory or a deployed training program.
 
 ## The situation
