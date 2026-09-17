@@ -64,7 +64,7 @@
 
 我正在围绕 **Agent × Forward Deployed Engineering** 构建公开作品集：从真实工作流出发，用小型系统尽快证明可度量价值，并只在首个有效闭环成立后继续扩展。
 
-Build Lab 的设计参考了 [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf) 中总结的模式。具体实现、数据集、评估方法和结论均由我独立完成。
+Build Lab 中的每个项目都由我独立定义范围、实现、评估和记录。当缺少真实企业与私有数据时，我会使用合成数据建立可复现实验，并明确当前阶段与验证结果。
 
 <p align="center">
   <sub>从模糊问题到可运行系统，再从可运行系统到可持续能力。</sub>

@@ -68,6 +68,6 @@ The agent retrieves, explains, quizzes, records uncertainty, and suggests missin
 3. Abstention and escalation are product features, especially when advice can affect safety or uptime.
 4. Knowledge freshness needs an owner and review date; retrieval relevance alone cannot guarantee correctness.
 
-## Source pattern
+## Project ownership
 
-Adapted from the knowledge-transfer and AI-assisted training pattern in Case 1 of [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf). The implementation, dataset, and conclusions are my own.
+This is my public Build Lab project. I define the scope, construct the dataset, implement the system, run the evaluation, and publish the limitations and conclusions.

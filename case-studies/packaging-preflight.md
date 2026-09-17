@@ -71,6 +71,6 @@ Code owns reproducible calculations and deterministic checks. Models locate, ext
 3. Deterministic rules should be executable tests, not prose hidden inside a prompt.
 4. Human feedback matters only when accepted/rejected findings become regression cases.
 
-## Source pattern
+## Project ownership
 
-Adapted from the packaging-review and product-lifecycle pattern in Case 19 of [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf). The implementation, dataset, and conclusions are my own.
+This is my public Build Lab project. I define the scope, create the synthetic packaging set, implement the checks, run the evaluation, and publish the limitations and conclusions.

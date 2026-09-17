@@ -76,6 +76,6 @@ No improvement number will be published until the baseline and evaluation set ar
 3. The evaluation unit should be a complete business task, not a single relevant chunk.
 4. Corrections become valuable only when they change durable state and can be tested later.
 
-## Source pattern
+## Project ownership
 
-Adapted from the local file-asset and capability-transfer pattern in Case 11 of [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf). The implementation, dataset, and conclusions are my own.
+This is my public Build Lab project. I define the scope, construct the dataset, implement the system, run the evaluation, and publish the limitations and conclusions.

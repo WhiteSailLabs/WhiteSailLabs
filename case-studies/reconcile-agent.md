@@ -72,6 +72,6 @@ Code owns arithmetic, identifiers, dates, tolerances, and deterministic matching
 3. Confidence must be attached to individual extracted fields, not one score for the whole document.
 4. A useful demo needs deliberately difficult failures: split payments, refunds, duplicate receipts, date rollovers, and tolerance-boundary cases.
 
-## Source pattern
+## Project ownership
 
-Adapted from the retail reconciliation pattern in Case 10 of [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf). The implementation, dataset, and conclusions are my own.
+This is my public Build Lab project. I define the scope, generate the reconciliation dataset, implement the workflow, run the evaluation, and publish the limitations and conclusions.

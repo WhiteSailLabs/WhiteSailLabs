@@ -64,7 +64,7 @@ Every FDE build should answer five questions:
 
 I am building a public portfolio around **Agent × Forward Deployed Engineering**: small systems that begin with a real workflow, expose measurable value quickly, and grow only after the first useful loop works.
 
-The Build Lab is informed by patterns documented in [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf). The implementations, datasets, evaluations, and conclusions will be my own.
+Every Build Lab project is scoped, implemented, evaluated, and documented as my own public engineering work. Synthetic data is used where a real organization or private dataset is not available.
 
 <p align="center">
   <sub>From ambiguity to a working system—and from a working system to lasting capability.</sub>
