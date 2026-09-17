@@ -33,10 +33,10 @@
 
 | 项目 | 现场问题 | Agent 系统 | 证据目标 | 状态 |
 | --- | --- | --- | --- | --- |
-| [Knowledge Relay](case-studies/knowledge-relay.md) | 关键经验留在资深人员头脑和零散手册中。 | 知识采集、带引用检索、引导学习、进度跟踪与升级处理。 | 检索召回率、有依据回答率、任务完成率、减少专家打断次数。 | 设计中 |
-| [Local Asset Navigator](case-studies/local-asset-navigator.md) | 文件和图片虽然存在，但缺乏关系与业务语境。 | 带权限、来源追踪、搜索和可复用工作流的本地多模态索引。 | Top-k 检索率、搜索耗时、隐私边界、任务复用成功率。 | 基于 [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) 构建中 |
-| [Reconcile Agent](case-studies/reconcile-agent.md) | 工作人员反复核对 POS 导出、结算表和扫描票据。 | 确定性匹配、OCR/视觉提取与人工异常审核队列。 | 自动匹配覆盖率、误匹配率、审核耗时、追回差异金额。 | 计划中 |
-| [Packaging Preflight](case-studies/packaging-preflight.md) | 包装错误发现太晚，造成排队和返工。 | OCR/VLM 提取、确定性规则检查、带依据的问题报告和人工批准。 | 规则覆盖率、漏检率、可追溯性、审核时间缩短比例。 | 计划中 |
+| [Knowledge Relay](case-studies/knowledge-relay.zh-CN.md) | 关键经验留在资深人员头脑和零散手册中。 | 知识采集、带引用检索、引导学习、进度跟踪与升级处理。 | 检索召回率、有依据回答率、任务完成率、减少专家打断次数。 | 调研设计完成 |
+| [Local Asset Navigator](case-studies/local-asset-navigator.zh-CN.md) | 文件和图片虽然存在，但缺乏关系与业务语境。 | 带权限、来源追踪、搜索和可复用工作流的本地多模态索引。 | Top-k 检索率、搜索耗时、隐私边界、任务复用成功率。 | 基于 [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) 构建中 |
+| [Reconcile Agent](case-studies/reconcile-agent.zh-CN.md) | 工作人员反复核对 POS 导出、结算表和扫描票据。 | 确定性匹配、OCR/视觉提取与人工异常审核队列。 | 自动匹配覆盖率、误匹配率、审核耗时、异常识别率。 | 原型规格完成 |
+| [Packaging Preflight](case-studies/packaging-preflight.zh-CN.md) | 包装错误发现太晚，造成排队和返工。 | OCR/VLM 提取、确定性规则检查、带依据的问题报告和人工批准。 | 规则覆盖率、漏检率、可追溯性、审核时间缩短比例。 | 技术设计完成 |
 
 ## 代表项目
 

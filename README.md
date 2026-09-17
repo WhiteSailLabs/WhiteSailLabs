@@ -33,10 +33,10 @@ These are personal, openly documented adaptations of real deployment patterns—
 
 | Build | Field problem | Agent system | Evidence target | Status |
 | --- | --- | --- | --- | --- |
-| [Knowledge Relay](case-studies/knowledge-relay.md) | Critical know-how is trapped in experienced people's heads and scattered manuals. | Knowledge capture, cited retrieval, guided learning, progress and escalation. | Retrieval recall, grounded-answer rate, task completion, expert interruptions avoided. | Designing |
+| [Knowledge Relay](case-studies/knowledge-relay.md) | Critical know-how is trapped in experienced people's heads and scattered manuals. | Knowledge capture, cited retrieval, guided learning, progress and escalation. | Retrieval recall, grounded-answer rate, task completion, expert interruptions avoided. | Discovery design complete |
 | [Local Asset Navigator](case-studies/local-asset-navigator.md) | Files and images exist, but their relationships and business context are missing. | Local multimodal index with permissions, provenance, search, and reusable workflows. | Top-k retrieval, search time, privacy boundary, successful task reuse. | Building on [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) |
-| [Reconcile Agent](case-studies/reconcile-agent.md) | Staff repeatedly compare POS exports, settlement sheets, and scanned receipts. | Deterministic matching plus OCR/vision extraction and a human exception queue. | Auto-match coverage, false-match rate, review time, recovered variance. | Planned |
-| [Packaging Preflight](case-studies/packaging-preflight.md) | Packaging errors are discovered late, causing queues and rework. | OCR/VLM extraction, deterministic rule checks, cited findings, and human approval. | Rule coverage, false negatives, traceability, review-time reduction. | Planned |
+| [Reconcile Agent](case-studies/reconcile-agent.md) | Staff repeatedly compare POS exports, settlement sheets, and scanned receipts. | Deterministic matching plus OCR/vision extraction and a human exception queue. | Auto-match coverage, false-match rate, review time, discrepancy recall. | Prototype specified |
+| [Packaging Preflight](case-studies/packaging-preflight.md) | Packaging errors are discovered late, causing queues and rework. | OCR/VLM extraction, deterministic rule checks, cited findings, and human approval. | Rule coverage, false negatives, traceability, review-time reduction. | Technical design complete |
 
 ## Selected work
 

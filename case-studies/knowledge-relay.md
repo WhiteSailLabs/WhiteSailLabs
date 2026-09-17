@@ -1,43 +1,67 @@
 # Knowledge Relay
 
-## Field problem
+[简体中文](knowledge-relay.zh-CN.md)
 
-Experienced operators hold critical tacit knowledge, while manuals capture only the standard path. Newcomers repeatedly interrupt experts, training progress is hard to observe, and rare exceptions are learned too late.
+> **Portfolio build · Discovery design complete.** The demonstration will use open manuals and synthetic expert exceptions. It does not claim access to a factory or a deployed training program.
 
-## Personal implementation
+## The situation
 
-Build a public demonstration using open technical manuals, annotated troubleshooting notes, and a synthetic set of expert exceptions. The system will not pretend to reproduce a real factory; it will demonstrate the delivery method on a transparent dataset.
+New operators can read the standard procedure, yet still struggle when symptoms are incomplete, machines behave differently, or an exception is missing from the manual. The same senior expert gets interrupted repeatedly, while managers cannot see which knowledge gaps are actually slowing the team down.
 
-## Workflow
+## Pain analysis
 
-1. Map the tasks, recurring questions, failure points, and escalation moments.
-2. Convert the discovery set into an evaluation set before building retrieval.
-3. Parse manuals and expert notes into cited, versioned knowledge units.
-4. Answer routine questions with evidence and route uncertain cases to a human.
-5. Turn recurring questions into guided lessons and track completion.
+- **Documents describe the standard path; experts carry the exception path.** Ordinary RAG retrieves text but misses decision context.
+- **Interview-only discovery produces polished summaries, not operational knowledge.** The important details appear while someone performs the task.
+- **Training completion is mistaken for capability.** Reading a manual does not prove that a person can diagnose a failure.
+- **Unsupported answers create safety risk.** A confident answer without evidence is worse than an escalation.
+- **Knowledge decays silently.** Procedures change, but old chunks remain retrievable without an owner or review date.
 
-## Human / agent boundary
+## My approach
 
-- The agent retrieves, explains, quizzes, and records uncertainty.
-- A human owns safety-critical judgment, exception approval, and knowledge updates.
-- Unsupported answers must abstain rather than improvise.
+1. Observe a task flow and record recurring questions, decisions, exceptions, and escalation moments.
+2. Convert those observations into an evaluation set before building retrieval.
+3. Parse manuals and expert notes into versioned knowledge units with owner, source, and review date.
+4. Answer routine questions with citations; abstain and escalate when evidence is missing or conflicting.
+5. Turn repeated questions into short scenario-based lessons and track demonstrated capability.
+6. Feed accepted escalations back into the knowledge map as reviewed updates.
 
-## Evidence
+```mermaid
+flowchart LR
+    A[Observe real task] --> B[Question and exception set]
+    B --> C[Versioned knowledge map]
+    C --> D[Grounded assistant]
+    D -->|supported| E[Answer and teach]
+    D -->|uncertain| F[Expert escalation]
+    F --> G[Reviewed knowledge update]
+    G --> C
+```
 
-- Document parsing coverage
-- Recall@k on the discovery question set
-- Citation correctness and grounded-answer rate
-- Abstention quality on unsupported questions
-- Time-to-answer and expert interruptions avoided
+## Agent / human boundary
 
-## Deliverables
+The agent retrieves, explains, quizzes, records uncertainty, and suggests missing knowledge. A qualified human owns safety-critical judgment, exception approval, and publication of knowledge updates. Unsupported questions must trigger abstention rather than improvisation.
 
-- Local web application
-- Versioned knowledge map
-- Evaluation dataset and test runner
-- Training/progress view
-- Failure log and deployment runbook
+## What I will measure
+
+- Coverage of the observed question and exception set
+- Recall@k and citation correctness
+- Grounded-answer and abstention quality
+- Scenario-task completion, not just quiz completion
+- Time to a supported answer
+- Expert interruptions avoided, once a baseline exists
+
+## What has been built / what remains
+
+- **Designed:** discovery template, knowledge-unit schema, escalation states, and evaluation plan
+- **Next:** open-manual corpus, synthetic exception set, local retrieval service, and training view
+- **Not yet claimed:** operator productivity, production accuracy, or deployed safety improvement
+
+## Experience captured
+
+1. The discovery questions are the first evaluation dataset; they should not be discarded after interviews.
+2. Tacit knowledge is best captured around decisions and exceptions, not as long narrative transcripts.
+3. Abstention and escalation are product features, especially when advice can affect safety or uptime.
+4. Knowledge freshness needs an owner and review date; retrieval relevance alone cannot guarantee correctness.
 
 ## Source pattern
 
-Adapted from the knowledge-transfer and AI-assisted training pattern in Case 1 of [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf).
+Adapted from the knowledge-transfer and AI-assisted training pattern in Case 1 of [Datawhale FDE案例100](https://assets.datawhale.cn/Datawhale%20FDE%E6%A1%88%E4%BE%8B100.pdf). The implementation, dataset, and conclusions are my own.
