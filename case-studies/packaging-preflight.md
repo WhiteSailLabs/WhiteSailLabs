@@ -1,76 +1,43 @@
 # Packaging Preflight
 
+> Status: test plan complete; no working version yet
+
 [简体中文](packaging-preflight.zh-CN.md)
 
-<p align="center">
-  <img src="../assets/case-studies/packaging-preflight.png" alt="Editorial illustration of evidence-based packaging preflight" width="100%" />
-</p>
+I plan to design 12 fictional food packages and deliberately put mistakes in them.
 
-<p align="center"><sub>AI-generated concept illustration, not a real client site.</sub></p>
+Some will omit fields. Some nutrition tables will contain calculation errors. Some will disagree between the front and back. A few claims will have no automatic answer and should be reviewed by a person.
 
-> **Portfolio build · Technical design complete.** The demonstrator will use synthetic food-package artwork and public rules. It is not legal advice, a compliance certification, or a claim of client delivery.
+The question is not whether a model can “look at packaging.” It is whether the system can show where a problem is, why it is a problem, and when it should stop.
 
-## The situation
+## Why one model call is not enough
 
-Packaging review sits between design, product, legal, procurement, and channel operations. A small error discovered after artwork approval can trigger another design round, supplier delay, or launch slip. Reviewers spend time rechecking deterministic details while genuinely ambiguous claims still require expert judgment.
+A package mixes normal text, decorative lettering, nutrition tables, marks, product images, and layout. A model looking at the full image may miss small text or read a number correctly but calculate it incorrectly.
 
-## Pain analysis
+I will split the artwork into regions. OCR will read text and tables. Normal code will recalculate nutrition values. Fixed rules will check missing fields and contradictions. A model can help with irregular text and explanations. People will handle claims, visual judgment, and rule applicability.
 
-- **One image contains several different problem types.** Nutrition calculations, text extraction, required marks, marketing claims, and visual hierarchy need different methods.
-- **A vision model can read a value without proving where it came from.** Reviewers need coordinates, confidence, and the original crop.
-- **Rules change by product and channel.** A hard-coded “compliant / non-compliant” answer hides scope and version risk.
-- **False negatives are more expensive than noisy suggestions.** The system must be evaluated on seeded violations, not attractive demos.
-- **Legal interpretation cannot be delegated to a model.** Deterministic checks and human judgment must remain visibly separate.
+## Evidence for every finding
 
-## My approach
+Each result should include the exact image region, extracted value, calculation or rule, confidence, and suggested reviewer.
 
-1. Create synthetic package designs with controlled violations and clean ground truth.
-2. Segment each artwork into identity, ingredients, nutrition table, claims, marks, and layout regions.
-3. Extract fields with OCR/VLM while retaining region coordinates and confidence.
-4. Run reproducible calculations and explicit rules in code.
-5. Attach the exact rule source, applicability, version, and evidence crop to every finding.
-6. Send ambiguous claims and visual judgments to a human reviewer.
-7. Store accepted and rejected findings as regression tests.
+For a nutrition mismatch, the page should show the original numbers and the recalculation instead of asking a model to guess in prose.
 
-```mermaid
-flowchart LR
-    A[Package artwork] --> B[Region detection]
-    B --> C[OCR and VLM extraction]
-    C --> D[Normalized fields]
-    D --> E[Deterministic rules]
-    D --> F[Ambiguous claim review]
-    E --> G[Evidence-backed findings]
-    F --> H[Human decision]
-    G --> I[Audit trail]
-    H --> I
-```
+## Evaluation
 
-## Agent / human boundary
+The 12 packages will contain clean examples, clear mistakes, and boundary cases. I will report detection by error type, serious misses, extraction errors by region, evidence coverage, and which suggestions people accept or reject.
 
-Code owns reproducible calculations and deterministic checks. Models locate, extract, normalize, and explain; they do not invent rules. A qualified reviewer owns applicability, legal interpretation, subjective layout judgment, and final approval.
+This project provides review suggestions, not legal conclusions. “No issue found” will never be presented as compliance approval.
 
-## What I will measure
+## Progress
 
-- OCR accuracy by region and field type
-- Deterministic-rule coverage
-- Recall on deliberately seeded violations
-- False-negative rate by severity
-- Rule citation and evidence-crop completeness
-- Reviewer time per package and correction turnaround
+- [x] Define package regions
+- [x] Define the first error types
+- [x] Define evidence required for a finding
+- [ ] Create 12 fictional packages
+- [ ] Label every injected issue
+- [ ] Build text and table extraction
+- [ ] Build rule checks
+- [ ] Build the review page
+- [ ] Publish false-negative and false-positive results
 
-## What has been built / what remains
-
-- **Designed:** region taxonomy, rule/evidence schema, reviewer boundary, and evaluation plan
-- **Next:** synthetic artwork set, extraction pipeline, rule engine, and review interface
-- **Not yet claimed:** legal compliance, production recall, or launch-time savings
-
-## Experience captured
-
-1. Multimodal workflows improve when the document is decomposed into regions before model reasoning.
-2. Every finding needs two forms of provenance: where it appeared in the artwork and which rule produced the judgment.
-3. Deterministic rules should be executable tests, not prose hidden inside a prompt.
-4. Human feedback matters only when accepted/rejected findings become regression cases.
-
-## Project ownership
-
-This is my public Build Lab project. I define the scope, create the synthetic packaging set, implement the checks, run the evaluation, and publish the limitations and conclusions.
+If the first version can only check nutrition tables and front/back consistency reliably, that is enough. Doing two checks well is more useful than claiming to review an entire package.

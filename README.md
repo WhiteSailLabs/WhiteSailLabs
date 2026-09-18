@@ -29,14 +29,14 @@
 
 ## FDE Build Lab
 
-These are personal, openly documented adaptations of real deployment patterns—not claims of client work. Each build must include a baseline, an evaluation set, human handoff, deployment notes, and an honest failure log.
+These are projects I am building in public. Each page says what exists today, what I am testing, and what is still unfinished.
 
-| Build | Field problem | Agent system | Evidence target | Status |
-| --- | --- | --- | --- | --- |
-| [Knowledge Relay](case-studies/knowledge-relay.md) | Critical know-how is trapped in experienced people's heads and scattered manuals. | Knowledge capture, cited retrieval, guided learning, progress and escalation. | Retrieval recall, grounded-answer rate, task completion, expert interruptions avoided. | Discovery design complete |
-| [Local Asset Navigator](case-studies/local-asset-navigator.md) | Files and images exist, but their relationships and business context are missing. | Local multimodal index with permissions, provenance, search, and reusable workflows. | Top-k retrieval, search time, privacy boundary, successful task reuse. | Building on [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) |
-| [Reconcile Agent](case-studies/reconcile-agent.md) | Staff repeatedly compare POS exports, settlement sheets, and scanned receipts. | Deterministic matching plus OCR/vision extraction and a human exception queue. | Auto-match coverage, false-match rate, review time, discrepancy recall. | Prototype specified |
-| [Packaging Preflight](case-studies/packaging-preflight.md) | Packaging errors are discovered late, causing queues and rework. | OCR/VLM extraction, deterministic rule checks, cited findings, and human approval. | Rule coverage, false negatives, traceability, review-time reduction. | Technical design complete |
+| Project | What I am building | How I will test it | Status |
+| --- | --- | --- | --- |
+| [Knowledge Relay](case-studies/knowledge-relay.md) | A manual assistant that cites its sources and stops when the answer is missing. | 40 questions from a public equipment manual. | Preparing test data |
+| [Local Asset Navigator](case-studies/local-asset-navigator.md) | A local search tool for my project files, images, PDFs, and versions. | 20 real searches completed by hand and by the tool. | Building on [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) |
+| [Reconcile Agent](case-studies/reconcile-agent.md) | A matcher for generated POS, settlement, and receipt data. | Injected refunds, duplicates, date changes, and OCR errors. | Data and rules designed |
+| [Packaging Preflight](case-studies/packaging-preflight.md) | A checker for 12 fictional food packages with deliberate mistakes. | Detection rate, missed errors, and human review. | Test plan complete |
 
 ## Selected work
 

@@ -1,81 +1,40 @@
 # Local Asset Navigator
 
+> Status: building on [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent)
+
 [简体中文](local-asset-navigator.zh-CN.md)
 
-<p align="center">
-  <img src="../assets/case-studies/local-asset-navigator.png" alt="Editorial illustration of scattered local files becoming a trusted asset graph" width="100%" />
-</p>
+This project started with my own files.
 
-<p align="center"><sub>AI-generated concept illustration, not a real client site.</sub></p>
+After several projects, my laptop contains specifications, screenshots, PDFs, notes, images, and many versions of the same file. I often remember saving something but not where it is. Finding a file also does not prove that it is the version I actually used.
 
-> **Portfolio build · In progress.** Built on public/synthetic data and an opt-in local workspace. This page separates implemented work from hypotheses; it does not claim a client deployment.
+I am building a search tool that runs locally.
 
-## The situation
+## Testing on my own workspace
 
-Small teams often have the files they need—product photos, quotations, customer notes, templates, and delivery records—but not the relationships between them. A request such as “find the latest approved artwork and everything used for its last delivery” becomes a manual search across folders, chat history, and individual memory.
+The first dataset will contain files from my public projects and notes that I explicitly select. I will keep realistic problems: similar filenames, misleading `final` copies, duplicate images, stale exports, and image-only material.
 
-## Pain analysis
+The first version will scan one test folder, not the whole drive.
 
-The visible problem is slow search. The deeper problems are:
+For a request such as “find the architecture diagram used in the last resume project and its explanation,” the tool should return the paths, explain the relationship, show competing versions, and mark uncertain links.
 
-- **Folder paths are not business context.** A filename rarely says which customer, product, order, or approval it belongs to.
-- **The newest file is not always the canonical file.** Copies and exported versions create dangerous false confidence.
-- **Useful corrections disappear in chat.** The user tells an assistant which file is right, but that knowledge is not saved as durable metadata.
-- **Cloud-first tools can violate the actual constraint.** Customer material and internal assets may not be allowed to leave the laptop.
-- **A plausible wrong result is worse than no result.** Search must expose provenance and uncertainty, not just semantic similarity.
+If two files both claim to be final, the tool should not choose silently. It should show the difference and save the user's decision for the next search.
 
-## My approach
+## Local by default
 
-I am extending [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) into a local-first asset workspace.
+Files, indexes, search history, and relationship data stay on the computer. If I later use an external model, the tool will send only the minimum content needed for that task and show what leaves the device.
 
-1. Start with 12–20 real search tasks, not a generic “chat with files” demo.
-2. Inventory file types, naming patterns, permissions, and known version traps.
-3. Extract text, image descriptions, timestamps, and explicit entity links locally.
-4. Build a lightweight graph across customer, product, project, version, and delivery.
-5. Return an asset bundle with source paths, relationship reasons, confidence, and stale-version warnings.
-6. Turn user corrections into versioned metadata that affects future retrieval.
+## Evaluation
 
-```mermaid
-flowchart LR
-    A[Local files] --> B[Local extraction]
-    B --> C[Entity and version graph]
-    C --> D[Task-based retrieval]
-    D --> E[Evidence bundle]
-    E --> F{User confirms?}
-    F -- yes --> G[Reusable metadata]
-    F -- no --> H[Correction and failure log]
-    H --> G
-```
+I will prepare 20 real retrieval tasks and complete them manually first. I will compare total task time, complete bundle retrieval, wrong-version errors, provenance coverage, permission handling, and whether corrections improve later searches.
 
-## Agent / human boundary
+## Progress
 
-The system may propose relationships and rank files. The user owns canonical-version decisions, sensitive links, and permission changes. Data stays local by default; any external model call must be explicit, scoped, and inspectable.
+- [x] Existing local knowledge workspace
+- [x] Basic file and relationship model
+- [ ] Prepare the test folder
+- [ ] Index images and PDFs
+- [ ] Add version-conflict warnings
+- [ ] Publish results for 20 tasks
 
-## What I will measure
-
-- Top-5 success on a fixed task-based evaluation set
-- Median time to assemble a complete asset bundle
-- Canonical-version error rate
-- Provenance coverage for every returned item
-- Permission-boundary tests
-- Percentage of corrections reused successfully on later tasks
-
-No improvement number will be published until the baseline and evaluation set are reproducible.
-
-## What has been built / what remains
-
-- **Existing foundation:** local LLM workspace and Obsidian-oriented knowledge capture
-- **In progress:** corpus generator, file inventory, entity schema, and retrieval task set
-- **Next:** multimodal index, relationship browser, correction loop, and evaluation runner
-- **Not yet claimed:** production deployment, customer adoption, or measured time savings
-
-## Experience captured
-
-1. Retrieval quality is limited more by relationship modeling and version semantics than by the embedding model.
-2. “Local-first” is an architecture decision: extraction, indexing, logs, and backups all need the same privacy boundary.
-3. The evaluation unit should be a complete business task, not a single relevant chunk.
-4. Corrections become valuable only when they change durable state and can be tested later.
-
-## Project ownership
-
-This is my public Build Lab project. I define the scope, construct the dataset, implement the system, run the evaluation, and publish the limitations and conclusions.
+It is not finished. The next useful step is a working version that can search my own project files, not another design document.

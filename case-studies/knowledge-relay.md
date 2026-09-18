@@ -1,73 +1,40 @@
 # Knowledge Relay
 
+> Status: preparing the evaluation set
+
 [简体中文](knowledge-relay.zh-CN.md)
 
-<p align="center">
-  <img src="../assets/case-studies/knowledge-relay.png" alt="Editorial illustration of AI-assisted knowledge transfer in a precision workshop" width="100%" />
-</p>
+I want to build a tool that helps new operators look up equipment problems.
 
-<p align="center"><sub>AI-generated concept illustration, not a real client site.</sub></p>
+A manual can explain where a control is and how to enter a parameter. It is less useful when something unusual happens. Experienced operators often know what to check first, but that knowledge is rarely written down in full.
 
-> **Portfolio build · Discovery design complete.** The demonstration will use open manuals and synthetic expert exceptions. It does not claim access to a factory or a deployed training program.
+This project will start with a public equipment manual and a question set that I create. It will not use a real factory or private operating data, so anyone can inspect and repeat the test.
 
-## The situation
+## First version
 
-New operators can read the standard procedure, yet still struggle when symptoms are incomplete, machines behave differently, or an exception is missing from the manual. The same senior expert gets interrupted repeatedly, while managers cannot see which knowledge gaps are actually slowing the team down.
+The first version will do three things:
 
-## Pain analysis
+1. Find the relevant part of the manual.
+2. Cite the file and page used in the answer.
+3. Say that it does not know when the evidence is weak.
 
-- **Documents describe the standard path; experts carry the exception path.** Ordinary RAG retrieves text but misses decision context.
-- **Interview-only discovery produces polished summaries, not operational knowledge.** The important details appear while someone performs the task.
-- **Training completion is mistaken for capability.** Reading a manual does not prove that a person can diagnose a failure.
-- **Unsupported answers create safety risk.** A confident answer without evidence is worse than an escalation.
-- **Knowledge decays silently.** Procedures change, but old chunks remain retrievable without an owner or review date.
+It will not control equipment or make safety decisions.
 
-## My approach
+## How I will test it
 
-1. Observe a task flow and record recurring questions, decisions, exceptions, and escalation moments.
-2. Convert those observations into an evaluation set before building retrieval.
-3. Parse manuals and expert notes into versioned knowledge units with owner, source, and review date.
-4. Answer routine questions with citations; abstain and escalate when evidence is missing or conflicting.
-5. Turn repeated questions into short scenario-based lessons and track demonstrated capability.
-6. Feed accepted escalations back into the knowledge map as reviewed updates.
+I will prepare 40 questions. Some will have a direct answer in one section. Some will require several sections. Others will deliberately omit the equipment model, material, or current operation.
 
-```mermaid
-flowchart LR
-    A[Observe real task] --> B[Question and exception set]
-    B --> C[Versioned knowledge map]
-    C --> D[Grounded assistant]
-    D -->|supported| E[Answer and teach]
-    D -->|uncertain| F[Expert escalation]
-    F --> G[Reviewed knowledge update]
-    G --> C
-```
+When key information is missing, the system should ask a useful follow-up instead of guessing.
 
-## Agent / human boundary
+I will record whether it finds the right section, whether the citation supports the answer, whether it asks for missing context, whether it stops when evidence is absent, and whether paraphrased questions produce stable results.
 
-The agent retrieves, explains, quizzes, records uncertainty, and suggests missing knowledge. A qualified human owns safety-critical judgment, exception approval, and publication of knowledge updates. Unsupported questions must trigger abstention rather than improvisation.
+## Progress
 
-## What I will measure
+- [x] Define the project boundary
+- [x] Design question categories
+- [ ] Select the public manual
+- [ ] Write the first 40 questions
+- [ ] Build the retrieval service
+- [ ] Publish results and failure cases
 
-- Coverage of the observed question and exception set
-- Recall@k and citation correctness
-- Grounded-answer and abstention quality
-- Scenario-task completion, not just quiz completion
-- Time to a supported answer
-- Expert interruptions avoided, once a baseline exists
-
-## What has been built / what remains
-
-- **Designed:** discovery template, knowledge-unit schema, escalation states, and evaluation plan
-- **Next:** open-manual corpus, synthetic exception set, local retrieval service, and training view
-- **Not yet claimed:** operator productivity, production accuracy, or deployed safety improvement
-
-## Experience captured
-
-1. The discovery questions are the first evaluation dataset; they should not be discarded after interviews.
-2. Tacit knowledge is best captured around decisions and exceptions, not as long narrative transcripts.
-3. Abstention and escalation are product features, especially when advice can affect safety or uptime.
-4. Knowledge freshness needs an owner and review date; retrieval relevance alone cannot guarantee correctness.
-
-## Project ownership
-
-This is my public Build Lab project. I define the scope, construct the dataset, implement the system, run the evaluation, and publish the limitations and conclusions.
+I do not yet claim shorter training time or real factory use. My first goal is simpler: can the system ask the right question when the user is unclear, and can it stop when the manual does not support an answer?
