@@ -1,40 +1,23 @@
-# Knowledge Relay
+# Knowledge Relay | The first retriever scored 37.5%
 
-> Status: preparing the evaluation set
+> Personal prototype · first reproducible run completed on 2026-09-19
 
-[简体中文](knowledge-relay.zh-CN.md)
+[中文](knowledge-relay.zh-CN.md) · [Code](../experiments/knowledge-relay/run.py) · [Raw results](../experiments/knowledge-relay/results.json)
 
-I want to build a tool that helps new operators look up equipment problems.
+## Why I built it
 
-A manual can explain where a control is and how to enter a parameter. It is less useful when something unusual happens. Experienced operators often know what to check first, but that knowledge is rarely written down in full.
+Manuals are organized for reading, not for anxious questions. A user says “the door is closed but the alarm remains,” while the manual says “E21 guard-door interlock.” The first problem is not generating a polished answer. It is finding the right evidence.
 
-This project will start with a public equipment manual and a question set that I create. It will not use a real factory or private operating data, so anyone can inspect and repeat the test.
+I reduced the first version to one test: can a natural-language question retrieve the correct section?
 
-## First version
+## What I implemented
 
-The first version will do three things:
+I wrote six fictional manual sections and 40 questions: eight base questions, each expressed five ways. A standard-library Python script ranks sections by token overlap and gives explicit alarm codes extra weight. It uses no model or external service.
 
-1. Find the relevant part of the manual.
-2. Cite the file and page used in the answer.
-3. Say that it does not know when the evidence is weak.
+## What actually happened
 
-It will not control equipment or make safety decisions.
+The first run retrieved the right section for **15 of 40 questions: 37.5%**. Explicit codes such as E12 worked. Everyday wording did not: “strange noise” and “abnormal spindle noise” were invisible to a literal tokenizer.
 
-## How I will test it
+That failure changed the order of work. At 37.5% retrieval accuracy, adding answer generation would only make wrong evidence sound convincing. I will add phrase splitting, synonyms, and a refusal threshold before generating answers.
 
-I will prepare 40 questions. Some will have a direct answer in one section. Some will require several sections. Others will deliberately omit the equipment model, material, or current operation.
-
-When key information is missing, the system should ask a useful follow-up instead of guessing.
-
-I will record whether it finds the right section, whether the citation supports the answer, whether it asks for missing context, whether it stops when evidence is absent, and whether paraphrased questions produce stable results.
-
-## Progress
-
-- [x] Define the project boundary
-- [x] Design question categories
-- [ ] Select the public manual
-- [ ] Write the first 40 questions
-- [ ] Build the retrieval service
-- [ ] Publish results and failure cases
-
-I do not yet claim shorter training time or real factory use. My first goal is simpler: can the system ask the right question when the user is unclear, and can it stop when the manual does not support an answer?
+There is no real machine, factory data, user study, or training-time claim in this prototype.

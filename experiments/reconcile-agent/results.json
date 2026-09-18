@@ -1,0 +1,22 @@
+{
+  "experiment": "reconcile-agent",
+  "dataset": {
+    "pos_rows": 600,
+    "settlement_rows": 596,
+    "injected": {
+      "missing": 15,
+      "duplicate": 11,
+      "amount_changed": 16,
+      "id_changed": 20
+    }
+  },
+  "metrics": {
+    "correct_decisions": 569,
+    "decision_accuracy": 0.948,
+    "automatic_matches": 538,
+    "sent_to_review": 27,
+    "missing": 35,
+    "wrong_automatic_matches": 0
+  },
+  "limitations": "Synthetic rows only; no OCR, split-order matching, UI, or production use."
+}

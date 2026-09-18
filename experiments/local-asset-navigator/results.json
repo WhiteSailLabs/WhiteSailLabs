@@ -1,0 +1,93 @@
+{
+  "experiment": "local-asset-navigator",
+  "dataset": {
+    "files_seen": 25,
+    "text_files_indexed": 20,
+    "tasks": 20
+  },
+  "metrics": {
+    "top_1_correct": 7,
+    "top_1_accuracy": 0.35
+  },
+  "failures": [
+    {
+      "query": "中文主页",
+      "expected": "README.zh-CN.md",
+      "actual": "case-studies/local-asset-navigator.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "english profile",
+      "expected": "README.md",
+      "actual": "case-studies/local-asset-navigator.md",
+      "correct": false
+    },
+    {
+      "query": "设备知识助手",
+      "expected": "case-studies/knowledge-relay.zh-CN.md",
+      "actual": "case-studies/local-asset-navigator.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "local files",
+      "expected": "case-studies/local-asset-navigator.md",
+      "actual": "experiments/local-asset-navigator/run.py",
+      "correct": false
+    },
+    {
+      "query": "自动对账",
+      "expected": "case-studies/reconcile-agent.zh-CN.md",
+      "actual": "experiments/local-asset-navigator/run.py",
+      "correct": false
+    },
+    {
+      "query": "english profile 项目",
+      "expected": "README.md",
+      "actual": "README.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "设备知识助手 项目",
+      "expected": "case-studies/knowledge-relay.zh-CN.md",
+      "actual": "README.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "manual retriever 项目",
+      "expected": "case-studies/knowledge-relay.md",
+      "actual": "README.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "本地资料搜索 项目",
+      "expected": "case-studies/local-asset-navigator.zh-CN.md",
+      "actual": "README.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "local files 项目",
+      "expected": "case-studies/local-asset-navigator.md",
+      "actual": "experiments/local-asset-navigator/run.py",
+      "correct": false
+    },
+    {
+      "query": "自动对账 项目",
+      "expected": "case-studies/reconcile-agent.zh-CN.md",
+      "actual": "README.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "reconciliation 项目",
+      "expected": "case-studies/reconcile-agent.md",
+      "actual": "README.zh-CN.md",
+      "correct": false
+    },
+    {
+      "query": "包装检查 项目",
+      "expected": "case-studies/packaging-preflight.zh-CN.md",
+      "actual": "README.zh-CN.md",
+      "correct": false
+    }
+  ],
+  "privacy": "Only this public repository was indexed; no home-directory scan."
+}

@@ -29,14 +29,14 @@
 
 ## FDE Build Lab
 
-These are projects I am building in public. Each page says what exists today, what I am testing, and what is still unfinished.
+These are personal prototypes I am building in public. Each one now includes runnable code, test data, and a first-run result. They are not customer deployments.
 
-| Project | What I am building | How I will test it | Status |
+| Project | First working scope | Measured result | Status |
 | --- | --- | --- | --- |
-| [Knowledge Relay](case-studies/knowledge-relay.md) | A manual assistant that cites its sources and stops when the answer is missing. | 40 questions from a public equipment manual. | Preparing test data |
-| [Local Asset Navigator](case-studies/local-asset-navigator.md) | A local search tool for my project files, images, PDFs, and versions. | 20 real searches completed by hand and by the tool. | Building on [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) |
-| [Reconcile Agent](case-studies/reconcile-agent.md) | A matcher for generated POS, settlement, and receipt data. | Injected refunds, duplicates, date changes, and OCR errors. | Data and rules designed |
-| [Packaging Preflight](case-studies/packaging-preflight.md) | A checker for 12 fictional food packages with deliberate mistakes. | Detection rate, missed errors, and human review. | Test plan complete |
+| [Knowledge Relay](case-studies/knowledge-relay.md) | Six manual sections and 40 retrieval questions | 15/40 top-1 hits (37.5%) | First run complete; many failures |
+| [Local Asset Navigator](case-studies/local-asset-navigator.md) | Local search limited to this public repository | 6/20 top-1 hits (30%) | First run complete; index pollution is visible |
+| [Reconcile Agent](case-studies/reconcile-agent.md) | 600 generated POS rows and conservative matching rules | 569/600 correct decisions; zero wrong auto-matches | First run complete |
+| [Packaging Preflight](case-studies/packaging-preflight.md) | 12 structured package-copy fixtures and three rules | 7/7 injected issues found; zero false positives | Rules prototype complete |
 
 ## Selected work
 

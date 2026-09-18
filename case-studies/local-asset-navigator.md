@@ -1,40 +1,13 @@
-# Local Asset Navigator
+# Local Asset Navigator | Searching my own public repository first
 
-> Status: building on [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent)
+> Personal prototype · first reproducible run completed on 2026-09-19
 
-[简体中文](local-asset-navigator.zh-CN.md)
+[中文](local-asset-navigator.zh-CN.md) · [Code](../experiments/local-asset-navigator/run.py) · [Raw results](../experiments/local-asset-navigator/results.json)
 
-This project started with my own files.
+I often remember writing something but not its filename or folder. The first version deliberately indexes only this public profile repository. It does not scan my home directory, which keeps the privacy boundary clear and the test reproducible.
 
-After several projects, my laptop contains specifications, screenshots, PDFs, notes, images, and many versions of the same file. I often remember saving something but not where it is. Finding a file also does not prove that it is the version I actually used.
+The script reads paths and text, then ranks files by literal query frequency with extra weight for path matches. The 20 tasks cover both profile languages and all four case studies. There is no vector database, model, or pre-built tagging system.
 
-I am building a search tool that runs locally.
+In the final repository state it saw 25 files, indexed 20 text files, and returned the correct top result for only **6 of 20 tasks: 30%**. Before the experiment files were added, the same baseline scored 55%; the drop itself exposed index pollution. The evaluation script ranked first for queries it contained, while summary links in the profile README often outranked the underlying case pages.
 
-## Testing on my own workspace
-
-The first dataset will contain files from my public projects and notes that I explicitly select. I will keep realistic problems: similar filenames, misleading `final` copies, duplicate images, stale exports, and image-only material.
-
-The first version will scan one test folder, not the whole drive.
-
-For a request such as “find the architecture diagram used in the last resume project and its explanation,” the tool should return the paths, explain the relationship, show competing versions, and mark uncertain links.
-
-If two files both claim to be final, the tool should not choose silently. It should show the difference and save the user's decision for the next search.
-
-## Local by default
-
-Files, indexes, search history, and relationship data stay on the computer. If I later use an external model, the tool will send only the minimum content needed for that task and show what leaves the device.
-
-## Evaluation
-
-I will prepare 20 real retrieval tasks and complete them manually first. I will compare total task time, complete bundle retrieval, wrong-version errors, provenance coverage, permission handling, and whether corrections improve later searches.
-
-## Progress
-
-- [x] Existing local knowledge workspace
-- [x] Basic file and relationship model
-- [ ] Prepare the test folder
-- [ ] Index images and PDFs
-- [ ] Add version-conflict warnings
-- [ ] Publish results for 20 tasks
-
-It is not finished. The next useful step is a working version that can search my own project files, not another design document.
+The next version needs to separate user documents from tool code and weight titles, links, and file types differently. Images, PDFs, version conflicts, latency, and private directories are not tested yet.

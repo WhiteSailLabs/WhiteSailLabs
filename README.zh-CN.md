@@ -29,14 +29,14 @@
 
 ## FDE Build Lab
 
-这些是我公开开发的个人项目。每个页面都会说明现在做到了哪里、准备测试什么，以及哪些部分还没有完成。
+这些是我正在公开开发的个人原型。每个项目都有可运行代码、测试数据和第一次运行结果。它们不是客户案例，也还没有进入生产环境。
 
-| 项目 | 我在做什么 | 准备怎么测试 | 状态 |
+| 项目 | 第一次做出的东西 | 实测结果 | 状态 |
 | --- | --- | --- | --- |
-| [Knowledge Relay](case-studies/knowledge-relay.zh-CN.md) | 一个会标出来源、找不到答案就停止的设备手册助手。 | 用公开手册整理 40 个问题。 | 正在准备测试数据 |
-| [Local Asset Navigator](case-studies/local-asset-navigator.zh-CN.md) | 在本机搜索我的项目文件、图片、PDF 和不同版本。 | 选 20 个任务，分别手工查找和用工具查找。 | 基于 [llm-obsidian-agent](https://github.com/WhiteSailLabs/llm-obsidian-agent) 构建中 |
-| [Reconcile Agent](case-studies/reconcile-agent.zh-CN.md) | 核对程序生成的 POS、结算表和票据数据。 | 主动加入退款、重复记录、跨日和 OCR 错误。 | 数据和规则已设计 |
-| [Packaging Preflight](case-studies/packaging-preflight.zh-CN.md) | 检查 12 张故意放入错误的虚拟食品包装。 | 统计发现了多少、漏掉多少，再交给人复核。 | 测试方案完成 |
+| [Knowledge Relay](case-studies/knowledge-relay.zh-CN.md) | 6 段虚拟设备手册 + 40 个检索问题 | Top-1 命中 15/40（37.5%） | 第一版已运行，失败很多 |
+| [Local Asset Navigator](case-studies/local-asset-navigator.zh-CN.md) | 只索引这个公开仓库的本地搜索器 | 20 个任务命中 6 个（30%） | 第一版已运行，索引污染明显 |
+| [Reconcile Agent](case-studies/reconcile-agent.zh-CN.md) | 600 笔 POS 数据与保守匹配规则 | 判断正确 569/600；错误自动匹配 0 | 第一版已运行 |
+| [Packaging Preflight](case-studies/packaging-preflight.zh-CN.md) | 12 份结构化包装文案与 3 条检查规则 | 找到 7/7 个预埋问题，误报 0 | 规则原型已运行 |
 
 ## 代表项目
 
