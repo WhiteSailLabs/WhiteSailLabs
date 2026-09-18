@@ -33,8 +33,8 @@ These are personal prototypes I am building in public. Each one now includes run
 
 | Project | First working scope | Measured result | Status |
 | --- | --- | --- | --- |
-| [Knowledge Relay](case-studies/knowledge-relay.md) | Six manual sections and 40 retrieval questions | 15/40 top-1 hits (37.5%) | First run complete; many failures |
-| [Local Asset Navigator](case-studies/local-asset-navigator.md) | Local search limited to this public repository | 6/20 top-1 hits (30%) | First run complete; index pollution is visible |
+| [Knowledge Relay](case-studies/knowledge-relay.md) | Equipment knowledge retrieval with safe refusal | Closed-set retrieval improved from 15/40 to 40/40 | Public reproduction running |
+| [Local Asset Navigator](case-studies/local-asset-navigator.md) | Local document retrieval with directory boundaries | 6/20 improved to 8/20 after index scoping | Public reproduction in progress |
 | [Reconcile Agent](case-studies/reconcile-agent.md) | 600 generated POS rows and conservative matching rules | 569/600 correct decisions; zero wrong auto-matches | First run complete |
 | [Packaging Preflight](case-studies/packaging-preflight.md) | 12 structured package-copy fixtures and three rules | 7/7 injected issues found; zero false positives | Rules prototype complete |
 

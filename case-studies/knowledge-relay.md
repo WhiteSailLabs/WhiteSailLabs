@@ -1,6 +1,6 @@
-# Knowledge Relay | The first retriever scored 37.5%
+# Knowledge Relay | Turning troubleshooting knowledge into traceable answers
 
-> Personal prototype · first reproducible run completed on 2026-09-19
+> Public reproduction · private material replaced by a synthetic manual and 40 test questions
 
 [中文](knowledge-relay.zh-CN.md) · [Code](../experiments/knowledge-relay/run.py) · [Raw results](../experiments/knowledge-relay/results.json)
 
@@ -16,8 +16,8 @@ I wrote six fictional manual sections and 40 questions: eight base questions, ea
 
 ## What actually happened
 
-The first run retrieved the right section for **15 of 40 questions: 37.5%**. Explicit codes such as E12 worked. Everyday wording did not: “strange noise” and “abnormal spindle noise” were invisible to a literal tokenizer.
+The first run retrieved the right section for **15 of 40 questions: 37.5%**. Explicit codes worked; everyday language did not. I added a small field-language map and Chinese bigram tokenization. The second run reached **40/40 on the same closed set**.
 
-That failure changed the order of work. At 37.5% retrieval accuracy, adding answer generation would only make wrong evidence sound convincing. I will add phrase splitting, synonyms, and a refusal threshold before generating answers.
+That 100% is not a production claim: the fixes were informed by the same failures and may be overfit. The next gate is a blind set written by people who did not build the retriever, plus missing-information and no-answer cases.
 
 There is no real machine, factory data, user study, or training-time claim in this prototype.

@@ -15,7 +15,16 @@ SECTIONS = {
 STOP = {"的", "了", "和", "在", "是", "要", "怎么", "什么", "一下", "机器", "设备"}
 
 def tokens(text):
-    return {x for x in re.findall(r"[A-Za-z]+\d*|[\u4e00-\u9fff]{2,}", text.lower()) if x not in STOP}
+    aliases = {
+        "怪声": "异响", "还能继续吗": "立即停机", "多久清理": "每班清理",
+        "怎样复位": "复位流程", "门轨有碎屑": "门轨异物",
+    }
+    for source, target in aliases.items():
+        text = text.replace(source, target)
+    found = set(re.findall(r"[a-z]+\d*", text.lower()))
+    for chunk in re.findall(r"[\u4e00-\u9fff]+", text):
+        found.update(chunk[i:i + 2] for i in range(len(chunk) - 1))
+    return found - STOP
 
 def retrieve(question):
     q = tokens(question)

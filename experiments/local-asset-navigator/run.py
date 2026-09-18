@@ -6,7 +6,10 @@ import re
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).parent / "results.json"
 
-files = [p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts and p != OUT]
+files = [
+    p for p in ROOT.rglob("*")
+    if p.is_file() and ".git" not in p.parts and "experiments" not in p.parts and p != OUT
+]
 docs = {}
 for path in files:
     rel = str(path.relative_to(ROOT))
@@ -33,7 +36,11 @@ def search(query):
     terms = re.findall(r"[a-z0-9-]+|[\u4e00-\u9fff]{2,}", query.lower())
     scored = []
     for rel, text in docs.items():
-        score = sum((4 if term in rel.lower() else 1) * text.count(term) for term in terms)
+        title = text.splitlines()[0] if text else ""
+        score = sum(
+            (8 if term in title else 0) + (4 if term in rel.lower() else 0) + text.count(term)
+            for term in terms
+        )
         scored.append((score, rel))
     scored.sort(key=lambda x: (-x[0], x[1]))
     return scored[0][1] if scored and scored[0][0] else None
@@ -51,4 +58,3 @@ report = {
 }
 OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
 print(json.dumps(report["metrics"], ensure_ascii=False))
-

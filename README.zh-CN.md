@@ -33,10 +33,10 @@
 
 | 项目 | 第一次做出的东西 | 实测结果 | 状态 |
 | --- | --- | --- | --- |
-| [Knowledge Relay](case-studies/knowledge-relay.zh-CN.md) | 6 段虚拟设备手册 + 40 个检索问题 | Top-1 命中 15/40（37.5%） | 第一版已运行，失败很多 |
-| [Local Asset Navigator](case-studies/local-asset-navigator.zh-CN.md) | 只索引这个公开仓库的本地搜索器 | 20 个任务命中 6 个（30%） | 第一版已运行，索引污染明显 |
-| [Reconcile Agent](case-studies/reconcile-agent.zh-CN.md) | 600 笔 POS 数据与保守匹配规则 | 判断正确 569/600；错误自动匹配 0 | 第一版已运行 |
-| [Packaging Preflight](case-studies/packaging-preflight.zh-CN.md) | 12 份结构化包装文案与 3 条检查规则 | 找到 7/7 个预埋问题，误报 0 | 规则原型已运行 |
+| [Knowledge Relay](case-studies/knowledge-relay.zh-CN.md) | 设备知识查找与安全拒答 | 封闭测试从 15/40 提升到 40/40 | 公开复现版已运行 |
+| [Local Asset Navigator](case-studies/local-asset-navigator.zh-CN.md) | 本地资料检索与目录权限控制 | 调整索引边界后从 6/20 提升到 8/20 | 公开复现版迭代中 |
+| [Reconcile Agent](case-studies/reconcile-agent.zh-CN.md) | POS、结算记录的自动匹配与人工复核 | 569/600 判断正确；错误自动通过 0 | 公开复现版已运行 |
+| [Packaging Preflight](case-studies/packaging-preflight.zh-CN.md) | 包装文案的规则检查与证据输出 | 结构化测试找到 7/7 个预埋问题 | 公开复现版已运行 |
 
 ## 代表项目
 
