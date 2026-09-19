@@ -1,13 +1,13 @@
 {
   "experiment": "local-asset-navigator",
   "dataset": {
-    "files_seen": 15,
+    "files_seen": 23,
     "text_files_indexed": 10,
     "tasks": 20
   },
   "metrics": {
-    "top_1_correct": 8,
-    "top_1_accuracy": 0.4
+    "top_1_correct": 9,
+    "top_1_accuracy": 0.45
   },
   "failures": [
     {
@@ -49,12 +49,6 @@
     {
       "query": "设备知识助手 项目",
       "expected": "case-studies/knowledge-relay.zh-CN.md",
-      "actual": "README.zh-CN.md",
-      "correct": false
-    },
-    {
-      "query": "manual retriever 项目",
-      "expected": "case-studies/knowledge-relay.md",
       "actual": "README.zh-CN.md",
       "correct": false
     },

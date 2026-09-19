@@ -34,7 +34,7 @@
 | 项目 | 第一次做出的东西 | 实测结果 | 状态 |
 | --- | --- | --- | --- |
 | [Knowledge Relay](case-studies/knowledge-relay.zh-CN.md) | 设备知识查找与安全拒答 | 封闭测试从 15/40 提升到 40/40 | 公开复现版已运行 |
-| [Local Asset Navigator](case-studies/local-asset-navigator.zh-CN.md) | 本地资料检索与目录权限控制 | 调整索引边界后从 6/20 提升到 8/20 | 公开复现版迭代中 |
+| [Local Asset Navigator](case-studies/local-asset-navigator.zh-CN.md) | 本地资料检索与目录权限控制 | 调整索引边界后从 6/20 提升到 9/20 | 公开复现版迭代中 |
 | [Reconcile Agent](case-studies/reconcile-agent.zh-CN.md) | POS、结算记录的自动匹配与人工复核 | 569/600 判断正确；错误自动通过 0 | 公开复现版已运行 |
 | [Packaging Preflight](case-studies/packaging-preflight.zh-CN.md) | 包装文案的规则检查与证据输出 | 结构化测试找到 7/7 个预埋问题 | 公开复现版已运行 |
 

@@ -8,6 +8,6 @@ I often remember writing something but not its filename or folder. The first ver
 
 The script reads paths and text, then ranks files by literal query frequency with extra weight for path matches. The 20 tasks cover both profile languages and all four case studies. There is no vector database, model, or pre-built tagging system.
 
-The unscoped baseline returned the correct top result for only **6 of 20 tasks**. Evaluation code and summary pages polluted the index. After excluding tool/output directories and increasing title weight, the final reproducible run reached **8/20**.
+The unscoped baseline returned the correct top result for only **6 of 20 tasks**. Evaluation code and summary pages polluted the index. After excluding tool/output directories and increasing title weight, the final reproducible run reached **9/20**.
 
 The next version needs to separate user documents from tool code and weight titles, links, and file types differently. Images, PDFs, version conflicts, latency, and private directories are not tested yet.
