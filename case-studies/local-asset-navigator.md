@@ -2,7 +2,7 @@
 
 > Public reproduction · a public repository replaces private project directories
 
-[中文](local-asset-navigator.zh-CN.md) · [Code](../experiments/local-asset-navigator/run.py) · [Raw results](../experiments/local-asset-navigator/results.json)
+[中文](local-asset-navigator.zh-CN.md)
 
 ## The problem is not simply “too many files”
 

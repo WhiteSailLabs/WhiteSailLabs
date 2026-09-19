@@ -2,7 +2,7 @@
 
 > 公开复现版 · 用公开仓库替代私人项目目录
 
-[English](local-asset-navigator.md) · [运行代码](../experiments/local-asset-navigator/run.py) · [原始结果](../experiments/local-asset-navigator/results.json)
+[English](local-asset-navigator.md)
 
 ## 真正的问题不是“文件太多”
 

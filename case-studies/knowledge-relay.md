@@ -2,7 +2,7 @@
 
 > Public reproduction · private material is replaced by a synthetic manual and 40 test questions
 
-[中文](knowledge-relay.zh-CN.md) · [Code](../experiments/knowledge-relay/run.py) · [Raw results](../experiments/knowledge-relay/results.json)
+[中文](knowledge-relay.zh-CN.md)
 
 ## The field problem was not “we need a chatbot”
 

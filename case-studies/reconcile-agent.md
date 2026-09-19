@@ -2,7 +2,7 @@
 
 > Public reproduction · private transactions are replaced by 600 deterministic synthetic rows
 
-[中文](reconcile-agent.zh-CN.md) · [Code](../experiments/reconcile-agent/run.py) · [Raw results](../experiments/reconcile-agent/results.json)
+[中文](reconcile-agent.zh-CN.md)
 
 ## Reconciliation is slow because exceptions are fragmented
 

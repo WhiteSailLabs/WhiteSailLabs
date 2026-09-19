@@ -2,7 +2,7 @@
 
 > 公开复现版 · 私有交易由固定随机种子生成的 600 笔数据替代
 
-[English](reconcile-agent.md) · [运行代码](../experiments/reconcile-agent/run.py) · [原始结果](../experiments/reconcile-agent/results.json)
+[English](reconcile-agent.md)
 
 ## 对账慢，不只是因为表格多
 

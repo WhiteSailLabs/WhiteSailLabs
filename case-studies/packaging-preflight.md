@@ -2,7 +2,7 @@
 
 > Public reproduction · brand and packaging content are synthetic
 
-[中文](packaging-preflight.zh-CN.md) · [Code](../experiments/packaging-preflight/run.py) · [Fixtures](../experiments/packaging-preflight/fixtures.json) · [Raw results](../experiments/packaging-preflight/results.json)
+[中文](packaging-preflight.zh-CN.md)
 
 ## Packaging risk appears at the last mile
 

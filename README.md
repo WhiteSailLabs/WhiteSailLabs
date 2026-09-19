@@ -29,7 +29,7 @@
 
 ## FDE Build Lab
 
-These are personal prototypes I am building in public. Each one now includes runnable code, test data, and a first-run result. They are not customer deployments.
+These are long-form FDE case studies covering the workflow, implementation choices, results, failure analysis, and lessons learned.
 
 | Project | First working scope | Measured result | Status |
 | --- | --- | --- | --- |

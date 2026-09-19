@@ -2,7 +2,7 @@
 
 > 公开复现版 · 品牌与包装内容均为合成数据
 
-[English](packaging-preflight.md) · [运行代码](../experiments/packaging-preflight/run.py) · [测试样本](../experiments/packaging-preflight/fixtures.json) · [原始结果](../experiments/packaging-preflight/results.json)
+[English](packaging-preflight.md)
 
 ## 包装审核的问题发生在最后一公里
 

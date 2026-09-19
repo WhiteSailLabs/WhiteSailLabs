@@ -2,7 +2,7 @@
 
 > 公开复现版 · 业务过程脱敏，私有资料由合成手册和 40 条测试问题替代
 
-[English](knowledge-relay.md) · [运行代码](../experiments/knowledge-relay/run.py) · [原始结果](../experiments/knowledge-relay/results.json)
+[English](knowledge-relay.md)
 
 ## 现场问题不是“缺一个聊天机器人”
 
